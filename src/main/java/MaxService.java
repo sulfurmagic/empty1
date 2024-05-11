@@ -1,10 +1,13 @@
-public class MaxService {
 
-    public int max(int a, int b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
+    public class MaxService {
+        public long findMax(long[] incomes) {
+            long currentMax = incomes[0];
+            for (long income : incomes) {
+                if (currentMax < income) {
+                    currentMax = income;
+                }
+            }
+            return currentMax;
         }
     }
-}
+

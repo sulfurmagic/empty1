@@ -1,18 +1,19 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.Assertions;
 
 public class MaxServiceTest {
 
     @Test
-    public void shouldFindMax () {
+    void findMax() {
         MaxService service = new MaxService();
 
-        int a = 1;
-        int b = 3;
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 12;
 
-        int expected = a;
-        int actual = service.max(a, b);
+        long actual = service.findMax(incomesInBillions);
 
         Assertions.assertEquals(expected, actual);
     }
 }
+
